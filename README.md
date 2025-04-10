@@ -2,6 +2,9 @@
 
 🥰本网站部署在 https://jxufe.deno.dev 由 [deno](https://deno.com) 驱动.
 
+👀perview：
+![Perview](https://img20.360buyimg.com/openfeedback/jfs/t1/281900/26/18229/3569762/67f7b035Faf5e86bf/22d9dcf726adbd62.png)
+
 🥸部署教程：
 
 1. 在github创建一个仓库（需要deno与github联合）📦
