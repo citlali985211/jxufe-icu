@@ -14,7 +14,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #6a11cb 0%, #ff5895 100%);
@@ -25,7 +25,7 @@
             letter-spacing: 0.02em;
             overflow-x: hidden;
         }
-        
+
         /* 导航栏样式 */
         .navbar {
             background-color: #000;
@@ -38,30 +38,30 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
-        
+
         .navbar-brand {
             display: flex;
             align-items: center;
             text-decoration: none;
         }
-        
+
         .navbar-brand img {
             height: 30px;
             margin-right: 10px;
         }
-        
+
         .navbar-brand h1 {
             color: #fff;
             font-size: 1.5rem;
             font-weight: 600;
         }
-        
+
         .nav-links {
             display: flex;
             align-items: center;
             gap: 25px;
         }
-        
+
         .nav-links a {
             color: #fff;
             text-decoration: none;
@@ -70,12 +70,12 @@
             transition: color 0.3s, transform 0.3s;
             position: relative;
         }
-        
+
         .nav-links a:hover {
             color: #f0a04d;
             transform: translateY(-2px);
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -86,11 +86,11 @@
             background-color: #f0a04d;
             transition: width 0.3s;
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         /* 主要内容区域 */
         .container {
             max-width: 1200px;
@@ -98,12 +98,12 @@
             padding: 0 20px;
             animation: fadeIn 1s ease-in;
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
         .slogan {
             color: white;
             position: relative;
@@ -116,11 +116,11 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        
+
         .slogan:hover {
             transform: translateX(10px);
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -129,34 +129,36 @@
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         /* 卡片网格 */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 25px;
         }
-        
+
         .card {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(12px);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
                         box-shadow 0.5s;
             cursor: pointer;
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.18);
             text-decoration: none;
+            /* 添加滚动视差效果 */
+            transform: translateY(0);
         }
-        
+
         .card:hover {
             transform: translateY(-10px) rotateZ(1deg) scale(1.02);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             background: rgba(255, 255, 255, 0.25);
         }
-        
+
         /* 卡片内光效动画 */
         .card::before {
             content: '';
@@ -177,12 +179,12 @@
             pointer-events: none;
             z-index: 2;
         }
-        
+
         .card:hover::before {
             opacity: 1;
             transform: rotate(30deg) translate(50%, -100%);
         }
-        
+
         .card-image {
             width: 100%;
             height: 180px;
@@ -191,15 +193,15 @@
             transition: transform 0.5s;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .card:hover .card-image {
             transform: scale(1.05);
         }
-        
+
         .card-content {
             padding: 20px;
         }
-        
+
         .meta-info {
             display: flex;
             align-items: center;
@@ -207,25 +209,25 @@
             margin-bottom: 12px;
             font-size: 0.85rem;
         }
-        
+
         .source {
             display: flex;
             align-items: center;
             color: #fff;
         }
-        
+
         .source img {
             width: 16px;
             height: 16px;
             margin-right: 6px;
             border-radius: 50%;
         }
-        
+
         .date {
             color: #f0a04d;
             font-weight: 500;
         }
-        
+
         .card-title {
             margin: 0;
             font-size: 1.1rem;
@@ -235,40 +237,40 @@
             transition: color 0.3s;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        
+
         .card:hover .card-title {
             color: #f0f0f0;
         }
-        
+
         /* 响应式设计 */
         @media (max-width: 1024px) {
             .grid-container {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .grid-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 480px) {
             .grid-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .navbar {
                 flex-direction: column;
                 padding: 15px;
             }
-            
+
             .nav-links {
                 margin-top: 15px;
                 gap: 15px;
             }
         }
-        
+
         /* 页脚区域 */
         .footer {
             background-color: rgba(0, 0, 0, 0.8);
@@ -277,35 +279,35 @@
             margin-top: 60px;
             text-align: center;
         }
-        
+
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .footer-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-bottom: 20px;
         }
-        
+
         .footer-links a {
             color: #fff;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-links a:hover {
             color: #f0a04d;
         }
-        
+
         .copyright {
             font-size: 0.9rem;
             color: #aaa;
         }
-        
+
         /* 返回顶部按钮 */
         .back-to-top {
             position: fixed;
@@ -326,24 +328,24 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
         }
-        
+
         .back-to-top.show {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .back-to-top:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.1);
         }
-        
+
         /* 友情链接样式 */
         .friend-links-section {
             padding: 2rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 1.5rem;
         }
-        
+
         .friend-links-title {
             color: #fff;
             text-align: center;
@@ -354,7 +356,7 @@
             justify-content: center;
             gap: 10px;
         }
-        
+
         .friend-links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -362,7 +364,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        
+
         .friend-link {
             display: flex;
             flex-direction: column;
@@ -373,23 +375,35 @@
             transition: all 0.3s ease;
             text-decoration: none;
         }
-        
+
         .friend-link:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-3px);
         }
-        
+
         .friend-logo {
             width: 120px;
             height: 40px;
             object-fit: contain;
             margin-bottom: 0.5rem;
         }
-        
+
         .friend-name {
             color: #f0a04d;
             font-size: 0.9rem;
             text-align: center;
+        }
+
+        /* 分类标题样式 */
+        .category-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            /* 添加上边距 */
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -400,7 +414,7 @@
             <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/278486/30/18092/418592/67f6a8c3Fd38fb810/284e2c63945de096.png" alt="Logo">
             <h1>JXUFE.ICU社区</h1>
         </a>
-        
+
         <div class="nav-links">
             <a href="https://www.discourse.org/" target="_blank"><i class="fab fa-discourse"></i> Discourse</a>
             <a href="https://misskey-hub.net/cn/" target="_blank"><i class="fab fa-mastodon"></i> Misskey</a>
@@ -421,10 +435,10 @@
             <br>
             <i class="fas fa-heart"></i> 致力于：打造中文技术区的净土之一，一个可以安居一隅的小天地，一个“共产共用”的理想线上社区
         </h3>
-        <h2 class="section-title">社区内容速览</h2>
-        
+
+        <!-- 社区入口 -->
+        <h2 class="category-title"><i class="fas fa-door-open"></i> 社区入口</h2>
         <div class="grid-container">
-            <!-- 第一行 -->
             <a href="https://jxufe.icu/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/275881/11/17302/549175/67f6b3e7F18024fbc/4428c979dc1b2bab.png" alt="JXUFE.ICU" class="card-image">
                 <div class="card-content">
@@ -437,7 +451,7 @@
                     <h3 class="card-title"><i class="fab fa-discourse"></i> 通过链接加入Discourse</h3>
                 </div>
             </a>
-            
+
             <a href="https://misskey.jxufe.icu/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/276302/30/18353/250812/67f6b2ccF1abf9393/285b9dcf6f75981c.png" alt="Misskey" class="card-image">
                 <div class="card-content">
@@ -450,7 +464,11 @@
                     <h3 class="card-title"><i class="fab fa-mastodon"></i> 通过邀请码加入Misskey</h3>
                 </div>
             </a>
-            
+        </div>
+
+        <!-- 社区规则 -->
+        <h2 class="category-title"><i class="fas fa-exclamation-circle"></i> 社区规则</h2>
+        <div class="grid-container">
             <a href="https://jxufe.icu/t/topic/4/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/273357/33/16598/175830/67f6b0d7Ff552370b/f71100478281289a.png" alt="JXUFE.ICU" class="card-image">
                 <div class="card-content">
@@ -463,7 +481,7 @@
                     <h3 class="card-title"><i class="fab fa-discourse"></i> 了解社区&规则</h3>
                 </div>
             </a>
-            
+
             <a href="https://jxufe.icu/t/topic/5/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/271550/28/17500/288696/67f6b0a0Ff9bc25ef/005265f1a9aca7bf.png" alt="JXUFE.ICU" class="card-image">
                 <div class="card-content">
@@ -476,8 +494,11 @@
                     <h3 class="card-title"><i class="fab fa-discourse"></i> 如何使用社区</h3>
                 </div>
             </a>
-            
-            <!-- 第二行 -->
+        </div>
+
+        <!-- 配套服务 -->
+        <h2 class="category-title"><i class="fas fa-tools"></i> 配套服务</h2>
+        <div class="grid-container">
             <a href="https://status.jxufe.icu/status/jxufe-icu" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/271689/28/17939/385147/67f6b1adFf7471d47/dce774fd8ce4bc16.png" alt="UptimeKuma" class="card-image">
                 <div class="card-content">
@@ -490,7 +511,7 @@
                     <h3 class="card-title"><i class="fab fa-watchman-monitoring"></i> 社区相关设施监控</h3>
                 </div>
             </a>
-            
+
             <a href="https://docker.jxufe.icu/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/276372/15/18420/490111/67f6b4aeFaef8a743/d32be94cb82f1c81.png" alt="Docker" class="card-image">
                 <div class="card-content">
@@ -503,7 +524,7 @@
                     <h3 class="card-title"><i class="fab fa-docker"></i><i class="fab fa-cloudflare"></i> Cloudflare Workers托管docker代理</h3>
                 </div>
             </a>
-            
+
             <a href="https://zbooks.jxufe.icu/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/284795/19/17401/3200320/67f72bc4Fcc8053de/bd54b6a4b674a7a9.png" alt="Zlibrary" class="card-image">
                 <div class="card-content">
@@ -516,7 +537,7 @@
                     <h3 class="card-title"><i class="fa fa-book"></i> Deno代理Zlibrary镜像</h3>
                 </div>
             </a>
-            
+
             <a href="https://reddit.kipjay.org/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/281378/14/17298/147691/67f72ce2Ffaae79c7/9a36203a7a7a9826.png" alt="redlib" class="card-image">
                 <div class="card-content">
@@ -529,7 +550,7 @@
                     <h3 class="card-title"><i class="fab fa-reddit"></i> VPS反向代理Reddit</h3>
                 </div>
             </a>
-            
+
             <a href="https://lemmy.kipjay.org/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/283924/21/16973/345061/67f79d65Fd4b168a9/3b9114e181b693a6.png" alt="Lemmy" class="card-image">
                 <div class="card-content">
@@ -542,7 +563,7 @@
                     <h3 class="card-title"><i class="fa fa-mouse"></i> VPS反向代理Reddit</h3>
                 </div>
             </a>
-            
+
             <a href="https://neko.jxufe.icu/" target="_blank" class="card">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/285183/26/17158/88227/67f7a396F39f7c2bc/68032e0d42151451.png" alt="Neko" class="card-image">
                 <div class="card-content">
@@ -605,7 +626,8 @@
                         <span class="friend-name">Linus_Torvalds</span>
                     </a>
                     <a href="https://discourse.org/" target="_blank" class="friend-link">
-                        <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/226602/12/30346/7482/67f7e35aFab7e29f2/72205ff7e39c05d5.webp" alt="discourse" class="friend-logo">
+                        <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/226602/12/30346/7482/67f7e35aFab7e29f2/72205ff7e39c05d5.webp" alt="discourse
+" class="friend-logo">
                         <span class="friend-name">Discourse</span>
                     </a>
                     <a href="https://misskey-hub.net/cn/docs/donate/" target="_blank" class="friend-link">
@@ -659,6 +681,18 @@
             } else {
                 btn.classList.remove('show');
             }
+
+           // 获取所有需要添加视差效果的卡片
+           const cards = document.querySelectorAll('.card');
+
+           cards.forEach(card => {
+                // 计算卡片滚动时的偏移量，调整 factor 可以改变视差滚动的强度
+                const factor = 0.1;
+                const translateY = window.scrollY * factor;
+
+                // 应用偏移量，创建视差滚动效果
+                card.style.transform = `translateY(${translateY}px)`;
+           });
         });
     </script>
 </body>
