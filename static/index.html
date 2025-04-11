@@ -7,6 +7,7 @@
     <!-- 添加 Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         /* 基础样式重置 */
         * {
@@ -24,6 +25,7 @@
             min-height: 100vh;
             letter-spacing: 0.02em;
             overflow-x: hidden; /* 隐藏水平滚动条 */
+            scroll-behavior: smooth; /* 启用平滑滚动 */
         }
 
         /* 导航栏样式 */
@@ -166,11 +168,6 @@
             font-size: 0.9rem;
             color: #aaa;
         }
-
-        /* 平滑滚动 */
-        html {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 <body>
@@ -180,6 +177,7 @@
             <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/278486/30/18092/418592/67f6a8c3Fd38fb810/284e2c63945de096.png" alt="Logo">
             <h1>JXUFE.ICU社区</h1>
         </a>
+
         <div class="nav-links">
             <a href="https://www.discourse.org/" target="_blank"><i class="fab fa-discourse"></i> Discourse</a>
             <a href="https://misskey-hub.net/cn/" target="_blank"><i class="fab fa-mastodon"></i> Misskey</a>
@@ -194,16 +192,38 @@
     <!-- 主要内容区域 -->
     <div id="main-container">
         <section class="section" id="section1">
-            <div class="fade-in">Section 1</div>
+            <div class="fade-in">
+                <h2>欢迎来到 JXUFE.ICU 社区</h2>
+                <p>我们致力于创建一个开放、友好的技术交流平台，为江西财经大学的师生提供支持和帮助。</p>
+            </div>
         </section>
         <section class="section" id="section2">
-            <div class="fade-in">Section 2</div>
+            <div class="fade-in">
+                <h2>Discourse 论坛</h2>
+                <p>在这里你可以提问、分享经验、参与讨论，与社区成员一起成长。</p>
+                <a href="https://www.discourse.org/" target="_blank">访问 Discourse 论坛</a>
+            </div>
         </section>
         <section class="section" id="section3">
-            <div class="fade-in">Section 3</div>
+            <div class="fade-in">
+                <h2>Misskey 社交平台</h2>
+                <p>加入我们的 Misskey 实例，分享你的想法、发现有趣的内容，与社区成员建立更紧密的联系。</p>
+                <a href="https://misskey-hub.net/cn/" target="_blank">访问 Misskey 社交平台</a>
+            </div>
         </section>
         <section class="section" id="section4">
-            <div class="fade-in">Section 4</div>
+            <div class="fade-in">
+                <h2>社区状态</h2>
+                <p>查看社区服务的运行状态，了解是否有任何问题。</p>
+                <a href="https://status.jxufe.icu/status/jxufe-icu" target="_blank">查看社区状态</a>
+            </div>
+        </section>
+        <section class="section" id="section5">
+            <div class="fade-in">
+                <h2>关于我们</h2>
+                <p>了解更多关于 JXUFE.ICU 社区的信息，以及我们的目标和愿景。</p>
+                <a href="https://linux.do/u/user695/summary/" target="_blank">了解更多关于我们</a>
+            </div>
         </section>
         <!-- 更多 section -->
     </div>
@@ -223,7 +243,7 @@
             const elements = document.querySelectorAll('.fade-in');
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
+                const elementVisible = 150; // 元素距离顶部多少像素时显示
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('appear');
                 } else {
