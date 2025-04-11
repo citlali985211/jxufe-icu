@@ -7,10 +7,6 @@
     <!-- 添加 Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- 引入 Locomotive Scroll CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-
     <style>
         /* 基础样式重置 */
         * {
@@ -27,7 +23,7 @@
             line-height: 1.6;
             min-height: 100vh;
             letter-spacing: 0.02em;
-            overflow: hidden; /* 隐藏滚动条，由 Locomotive Scroll 控制 */
+            overflow-x: hidden; /* 隐藏水平滚动条 */
         }
 
         /* 导航栏样式 */
@@ -170,16 +166,20 @@
             font-size: 0.9rem;
             color: #aaa;
         }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
-<body data-locomotive-scroll>
+<body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <a href="https://jxufe.icu/" target="_blank" class="navbar-brand">
             <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/278486/30/18092/418592/67f6a8c3Fd38fb810/284e2c63945de096.png" alt="Logo">
             <h1>JXUFE.ICU社区</h1>
         </a>
-
         <div class="nav-links">
             <a href="https://www.discourse.org/" target="_blank"><i class="fab fa-discourse"></i> Discourse</a>
             <a href="https://misskey-hub.net/cn/" target="_blank"><i class="fab fa-mastodon"></i> Misskey</a>
@@ -192,17 +192,17 @@
     </nav>
 
     <!-- 主要内容区域 -->
-    <div id="main-container" data-scroll-container>
-        <section class="section" data-scroll-section>
+    <div id="main-container">
+        <section class="section" id="section1">
             <div class="fade-in">Section 1</div>
         </section>
-        <section class="section" data-scroll-section>
+        <section class="section" id="section2">
             <div class="fade-in">Section 2</div>
         </section>
-        <section class="section" data-scroll-section>
+        <section class="section" id="section3">
             <div class="fade-in">Section 3</div>
         </section>
-        <section class="section" data-scroll-section>
+        <section class="section" id="section4">
             <div class="fade-in">Section 4</div>
         </section>
         <!-- 更多 section -->
@@ -217,33 +217,24 @@
         </div>
     </footer>
 
-    <!-- 引入 Locomotive Scroll JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <!-- 引入 GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
     <script>
-        // 初始化 Locomotive Scroll
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            multiplier: 0.8,
-            class: 'is-reveal'
-        });
-
-        // GSAP 滚动触发动画
-        gsap.utils.toArray(".fade-in").forEach(function(elem) {
-            gsap.from(elem, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: elem,
-                    start: "top 80%", // 元素顶部进入视口 80% 时触发
-                    end: "bottom 20%", // 元素底部离开视口 20% 时结束
-                    scrub: true, // 平滑过渡
+        // 滚动监听
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('appear');
+                } else {
+                    element.classList.remove('appear');
                 }
             });
+        });
+
+        // 初始加载时触发一次滚动监听
+        window.addEventListener('load', () => {
+            window.dispatchEvent(new Event('scroll'));
         });
     </script>
 </body>
