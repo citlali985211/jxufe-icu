@@ -6,6 +6,8 @@
     <title>JXUFE.ICU社区介绍</title>
     <!-- 添加 Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- 添加 AOS 动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* 基础样式重置 */
@@ -444,17 +446,17 @@
 
     <!-- 主要内容区域 -->
     <div class="container">
-        <h3 class="slogan">
+        <h3 class="slogan" data-aos="fade-up">
             <i class="fas fa-eye"></i> 这是一个使用了生成式人工智能(Claude3.7、DeepSeek R1、grok3)和人工的网页
             <br>
             <i class="fas fa-exclamation-triangle"></i> 免责声明：理性讨论，风险自担，遵守法律，尊重版权
             <br>
             <i class="fas fa-heart"></i> 致力于：打造中文技术区的净土之一，一个可以安居一隅的小天地，一个“共产共用”的理想线上社区
         </h3>
-        <h2 class="section-title">社区内容速览</h2>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">社区内容速览</h2>
 
         <!-- 分类导航栏 -->
-        <div class="category-nav">
+        <div class="category-nav" data-aos="fade-up" data-aos-delay="200">
             <a href="#" data-category="all" class="active">全部</a>
             <a href="#" data-category="community">社区服务</a>
             <a href="#" data-category="discourse">Discourse</a>
@@ -465,7 +467,7 @@
 
         <div class="grid-container">
             <!-- 第一行 -->
-            <a href="https://jxufe.icu/" target="_blank" class="card" data-category="discourse community">
+            <a href="https://jxufe.icu/" target="_blank" class="card" data-category="discourse community" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/275881/11/17302/549175/67f6b3e7F18024fbc/4428c979dc1b2bab.png" alt="JXUFE.ICU" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -478,7 +480,7 @@
                 </div>
             </a>
 
-            <a href="https://misskey.jxufe.icu/" target="_blank" class="card" data-category="misskey community">
+            <a href="https://misskey.jxufe.icu/" target="_blank" class="card" data-category="misskey community" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/276302/30/18353/250812/67f6b2ccF1abf9393/285b9dcf6f75981c.png" alt="Misskey" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -491,7 +493,7 @@
                 </div>
             </a>
 
-            <a href="https://jxufe.icu/t/topic/4/" target="_blank" class="card" data-category="discourse community">
+            <a href="https://jxufe.icu/t/topic/4/" target="_blank" class="card" data-category="discourse community" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/273357/33/16598/175830/67f6b0d7Ff552370b/f71100478281289a.png" alt="JXUFE.ICU" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -504,7 +506,7 @@
                 </div>
             </a>
 
-            <a href="https://jxufe.icu/t/topic/5/" target="_blank" class="card" data-category="discourse community">
+            <a href="https://jxufe.icu/t/topic/5/" target="_blank" class="card" data-category="discourse community" data-aos="fade-up" data-aos-delay="400">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/271550/28/17500/288696/67f6b0a0Ff9bc25ef/005265f1a9aca7bf.png" alt="JXUFE.ICU" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -518,7 +520,7 @@
             </a>
 
             <!-- 第二行 -->
-            <a href="https://status.jxufe.icu/status/jxufe-icu" target="_blank" class="card" data-category="community">
+            <a href="https://status.jxufe.icu/status/jxufe-icu" target="_blank" class="card" data-category="community" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/271689/28/17939/385147/67f6b1adFf7471d47/dce774fd8ce4bc16.png" alt="UptimeKuma" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -531,7 +533,7 @@
                 </div>
             </a>
 
-            <a href="https://docker.jxufe.icu/" target="_blank" class="card" data-category="docker community">
+            <a href="https://docker.jxufe.icu/" target="_blank" class="card" data-category="docker community" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/276372/15/18420/490111/67f6b4aeFaef8a743/d32be94cb82f1c81.png" alt="Docker" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -544,7 +546,7 @@
                 </div>
             </a>
 
-            <a href="https://zbooks.jxufe.icu/" target="_blank" class="card" data-category="resource community">
+            <a href="https://zbooks.jxufe.icu/" target="_blank" class="card" data-category="resource community" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/284795/19/17401/3200320/67f72bc4Fcc8053de/bd54b6a4b674a7a9.png" alt="Zlibrary" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -557,7 +559,7 @@
                 </div>
             </a>
 
-            <a href="https://reddit.kipjay.org/" target="_blank" class="card" data-category="resource community">
+            <a href="https://reddit.kipjay.org/" target="_blank" class="card" data-category="resource community" data-aos="fade-up" data-aos-delay="400">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/281378/14/17298/147691/67f72ce2Ffaae79c7/9a36203a7a7a9826.png" alt="redlib" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -570,7 +572,7 @@
                 </div>
             </a>
 
-            <a href="https://lemmy.kipjay.org/" target="_blank" class="card" data-category="resource community">
+            <a href="https://lemmy.kipjay.org/" target="_blank" class="card" data-category="resource community" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/283924/21/16973/345061/67f79d65Fd4b168a9/3b9114e181b693a6.png" alt="Lemmy" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -583,7 +585,7 @@
                 </div>
             </a>
 
-            <a href="https://neko.jxufe.icu/" target="_blank" class="card" data-category="docker community">
+            <a href="https://neko.jxufe.icu/" target="_blank" class="card" data-category="docker community" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/285183/26/17158/88227/67f7a396F39f7c2bc/68032e0d42151451.png" alt="Neko" class="card-image">
                 <div class="card-content">
                     <div class="meta-info">
@@ -604,68 +606,67 @@
     </div>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="footer-content">
             <!-- 友情链接部分 -->
             <div class="friend-links-section">
                 <h4 class="friend-links-title"><i class="fas fa-heart"></i> 特别感谢</h4>
                 <div class="friend-links-grid">
-                    <a href="https://deno.com/" target="_blank" class="friend-link">
+                    <a href="https://deno.com/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="100">
                         <img src="https://dash.deno.com/assets/logo.svg" alt="deno" class="friend-logo">
                         <span class="friend-name">deno</span>
                     </a>
-                    <a href="https://cloudflare.com/" target="_blank" class="friend-link">
+                    <a href="https://cloudflare.com/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="200">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/284203/16/17551/7497/67f7e38cF2b32a3c7/9ad8bc5079ed99d6.png" alt="Cloudflare" class="friend-logo">
                         <span class="friend-name">Cloudflare</span>
                     </a>
-                    <a href="https://hub.docker.com/" target="_blank" class="friend-link">
+                    <a href="https://hub.docker.com/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="300">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/277086/35/19001/1292/67f7e37bF58fff96a/1e6f5f7064d0b8c2.webp" alt="docker" class="friend-logo">
                         <span class="friend-name">Docker Hub</span>
                     </a>
-                    <a href="https://github.com/" target="_blank" class="friend-link">
+                    <a href="https://github.com/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="400">
                         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github" class="friend-logo">
                         <span class="friend-name">Github</span>
                     </a>
-                    <a href="https://www.kernel.org/" target="_blank" class="friend-link">
+                    <a href="https://www.kernel.org/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="100">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/282556/9/17648/15371/67f7df7aF8dbe74cb/08bcfe428ae27416.jpg" alt="linus torvalds" class="friend-logo">
                         <span class="friend-name">Linus_Torvalds</span>
                     </a>
-                    <a href="https://discourse.org/" target="_blank" class="friend-link">
+                    <a href="https://discourse.org/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="200">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/226602/12/30346/7482/67f7e35aFab7e29f2/72205ff7e39c05d5.webp" alt="discourse" class="friend-logo">
                         <span class="friend-name">Discourse</span>
                     </a>
-                    <a href="https://misskey-hub.net/cn/docs/donate/" target="_blank" class="friend-link">
+                    <a href="https://misskey-hub.net/cn/docs/donate/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="300">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/270572/40/19091/2460/67f7e34aFc920c6fc/e1233ce10f49cf92.webp" alt="misskey" class="friend-logo">
                         <span class="friend-name">Misskey</span>
                     </a>
-                    <a href="https://deepseek.com/" target="_blank" class="friend-link">
+                    <a href="https://deepseek.com/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="400">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/224643/15/32288/8803/67f7e337Fa47a563e/ceb5ab837d050964.png" alt="deepseek" class="friend-logo">
                         <span class="friend-name">DeepSeek</span>
                     </a>
-                    <a href="https://chat.qwen.ai" target="_blank" class="friend-link">
+                    <a href="https://chat.qwen.ai" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="100">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/89934/3/55420/44510/67f7e325Faa0ad049/722edec013228e23.png" alt="qwen" class="friend-logo">
                         <span class="friend-name">Qwen</span>
                     </a>
-                    <a href="https://claude.ai/" target="_blank" class="friend-link">
+                    <a href="https://claude.ai/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="200">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/284136/40/17367/3948/67f7e2d9Fff58b2e2/7b300bf4fd4b332d.webp" alt="claude" class="friend-logo">
                         <span class="friend-name">Claude</span>
                     </a>
-                    <a href="https://gemini.google.com/" target="_blank" class="friend-link">
+                    <a href="https://gemini.google.com/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="300">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/272859/35/19037/4046/67f7e2c6Faab1c29c/540dd41a1c0f567b.webp" alt="gemini" class="friend-logo">
                         <span class="friend-name">Gemini</span>
                     </a>
-                    <a href="https://x.ai/" target="_blank" class="friend-link">
+                    <a href="https://x.ai/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="400">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/275701/33/18495/8096/67f7e2b2F7e57c852/509357f86912bbb1.jpg" alt="grok" class="friend-logo">
                         <span class="friend-name">Grok</span>
                     </a>
-                    <a href="https://www.instagram.com/jaychou/" target="_blank" class="friend-link">
+                    <a href="https://www.instagram.com/jaychou/" target="_blank" class="friend-link" data-aos="fade-up" data-aos-delay="100">
                         <img src="https://img20.360buyimg.com/openfeedback/jfs/t1/270886/22/19346/18090/67f7e2a4Fa0c8f28e/1e7181142117797d.webp" alt="jaychou" class="friend-logo">
                         <span class="friend-name">JayChou</span>
                     </a>
                 </div>
             </div>
 
-            
             <div class="footer-links">
                 <a href="/static/privacy.html">隐私政策</a>
                 <a href="/static/terms.html">服务条款</a>
@@ -677,7 +678,16 @@
         </div>
     </footer>
 
+    <!-- AOS 脚本 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // 初始化 AOS
+        AOS.init({
+            duration: 1000, // 动画持续时间
+            offset: 120, // 触发动画的视口偏移量
+            once: true // 动画只触发一次
+        });
+
         // 返回顶部按钮显示逻辑
         window.addEventListener('scroll', () => {
             const btn = document.querySelector('.back-to-top');
